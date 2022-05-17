@@ -8,6 +8,8 @@ import { HousingLocation } from './housing-location';
 })
 export class AppComponent {
   title = 'fairhouse';
+  selectedLocation: HousingLocation | undefined;
+  updateSelectedLocation(location: HousingLocation) { this.selectedLocation = location;} searchHousingLocations() {}
   housingLocationList: HousingLocation[] = [
     {
       name: "Acme Fresh Start Housing",
@@ -17,6 +19,7 @@ export class AppComponent {
       availableUnits: 4,
       wifi: true,
       laundry: true,
+      
     },
     {
       name: "A113 Transitional Housing",
